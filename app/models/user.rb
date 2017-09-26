@@ -11,4 +11,9 @@ class User < ApplicationRecord
    self.role = 'trainer' if self.role.nil?
    end
 
+   # Primero decimos que usuario tiene muchos atrapados (y que cuando se borre un usuario se borren sus atrapados)
+has_many :catcheds, dependent: :destroy
+# Luego decimos que usuario tiene muchos pokemones a través de atrapados
+has_many :pokemons, through: :catcheds
+
 end
