@@ -35,3 +35,21 @@ Pokemon.create(
     }
   ]
 )
+
+User.destroy_all
+User.create(
+[
+  {
+    name: 'Jorge',
+    email: 'jv.vargass@gmail.com',
+    password: '12345678',
+    role: 'admin'
+  },
+  {
+    name: 'usuario2',
+    email: 'usuario2@usuario.com',
+    password: '12345678',
+    role: 'trainer'
+  }
+]
+)
